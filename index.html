@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Profesional</title>
+    <style>
+        /* Estilos globales */
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-yellow: #fff700;
+            --dark-blue: #000033;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        .nav-container {
+            background-color: rgba(0, 0, 51, 0.9);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem;
+            margin-top: 60px;
+        }
+
+        .profile-container {
+            position: relative;
+            width: 400px;
+            height: 500px;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .neon-border {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 25px;
+            border: 2px solid var(--neon-blue);
+            animation: neonPulse 1.5s infinite;
+        }
+
+        .title-container {
+            text-align: center;
+            position: relative;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+            margin-bottom: 1rem;
+        }
+
+        .university {
+            font-size: 1.5rem;
+            color: var(--neon-yellow);
+            text-shadow: 0 0 5px var(--neon-yellow);
+        }
+
+      
+
+        /* Contact Info */
+        .contact-info {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            text-align: right;
+        }
+
+        @keyframes neonPulse {
+            0% { box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue); }
+            50% { box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue); }
+            100% { box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue), 0 0 15px var(--neon-blue); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-menu">
+            <a href="about.html" class="nav-link">Sobre mí</a>
+            <a href="servicios.html" class="nav-link">Mis servicios</a>
+            <a href="schedule.html" class="nav-link">Agendar</a>
+        </div>
+    </nav>
+
+   
+
+    <main class="hero">
+        <div class="profile-container">
+            <img src="me.jpeg" alt="Foto de perfil" class="profile-image">
+            <div class="neon-border"></div>
+        </div>
+        
+        <div class="title-container">
+            <h1 class="main-title">Licenciado en Informática Administrativa</h1>
+            <h2 class="university">Universidad Autónoma del Estado de México</h2>
+        </div>
+    </main>
+
+    <div class="contact-info">
+        <p>Teléfono: 8120147527</p>
+        <p>Ubicación: Tonatico</p>
+    </div>
+</body>
+</html>

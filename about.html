@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí</title>
+    <style>
+        /* Estilos globales */
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-yellow: #fff700;
+            --dark-blue: #000033;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        .nav-container {
+            background-color: rgba(0, 0, 51, 0.9);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
+            transform: scale(1.1);
+        }
+
+        /* Contenedor principal */
+        .about-container {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 2rem;
+        }
+
+        /* Encabezado del perfil */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: rgba(0, 0, 51, 0.3);
+            border-radius: 15px;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+        }
+
+        .profile-name {
+            color: var(--neon-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .profile-title {
+            color: var(--neon-yellow);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 10px var(--neon-yellow);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--neon-blue);
+            box-shadow: 0 0 20px var(--neon-blue);
+            margin: 2rem auto;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--neon-blue);
+        }
+
+        /* Secciones de contenido */
+        .content-section {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin: 4rem 0;
+            padding: 2rem;
+            background: rgba(0, 0, 51, 0.3);
+            border-radius: 15px;
+            border: 1px solid var(--neon-blue);
+            transition: all 0.3s ease;
+        }
+
+        .content-section:hover {
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .content-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .section-image-container {
+            flex: 0 0 400px;
+            position: relative;
+        }
+
+        .section-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid var(--neon-blue);
+            transition: all 0.3s ease;
+        }
+
+        .section-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+
+        .section-content {
+            flex: 1;
+        }
+
+        .section-title {
+            color: var(--neon-yellow);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px var(--neon-yellow);
+        }
+
+        .section-text {
+            color: white;
+            font-size: 1.1rem;
+            text-align: justify;
+            padding: 1rem;
+            background: rgba(0, 0, 51, 0.5);
+            border-radius: 10px;
+            border: 1px solid var(--neon-blue);
+        }
+
+        /* Animación para los elementos */
+        @keyframes neonPulse {
+            0% { box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue); }
+            50% { box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue); }
+            100% { box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-container">
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="servicios.html" class="nav-link">Mis servicios</a>
+            <a href="schedule.html" class="nav-link">Agendar</a>
+        </div>
+    </nav>
+ 
+    <div class="about-container">
+        <div class="profile-header">
+            <h1 class="profile-name">Jairo Santiago Ayala Cruz</h1>
+            <h2 class="profile-title">Licenciado en Informática Administrativa</h2>
+            <img src="me2.jpeg" alt="Foto de perfil" class="profile-image">
+        </div>
+
+        <!-- Sección 1 -->
+        <div class="content-section">
+            <div class="section-image-container">
+                <img src="paginaImg.png" alt="Desarrollo Web y Aplicaciones" class="section-image">
+            </div>
+            <div class="section-content">
+                <h3 class="section-title">Desarrollo Web y Aplicaciones</h3>
+                <div class="section-text">
+                    <p>Especializado en la creación de soluciones web innovadoras y aplicaciones 
+                    móviles para puntos de venta. Mi enfoque combina diseño atractivo con 
+                    funcionalidad robusta, asegurando que cada proyecto cumpla con los más 
+                    altos estándares de calidad y usabilidad.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 2 -->
+        <div class="content-section">
+            <div class="section-image-container">
+                <img src="arduinoo.jpeg" alt="Automatización y Robótica" class="section-image">
+            </div>
+            <div class="section-content">
+                <h3 class="section-title">Automatización y Robótica</h3>
+                <div class="section-text">
+                    <p>Experto en el desarrollo de sistemas de automatización y proyectos de 
+                    robótica. Desde sistemas de riego automáticos hasta soluciones de domótica 
+                    completas, mi trabajo se centra en hacer la tecnología más accesible y 
+                    útil en la vida cotidiana.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3 -->
+        <div class="content-section">
+            <div class="section-image-container">
+                <img src="redes.jpeg" alt="Gestión de Redes y Sistemas" class="section-image">
+            </div>
+            <div class="section-content">
+                <h3 class="section-title">Gestión de Redes y Sistemas</h3>
+                <div class="section-text">
+                    <p>Amplia experiencia en la administración de redes empresariales y 
+                    sistemas informáticos. Proporciono soluciones integrales para la gestión 
+                    de dispositivos y la implementación de políticas de seguridad efectivas.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 4 -->
+        <div class="content-section">
+            <div class="section-image-container">
+                <img src="contenido.jpeg" alt="Producción Multimedia" class="section-image">
+            </div>
+            <div class="section-content">
+                <h3 class="section-title">Producción Multimedia</h3>
+                <div class="section-text">
+                    <p>Creación de contenido multimedia de alta calidad, incluyendo videos 
+                    corporativos, material educativo y contenido promocional. Mi trabajo 
+                    combina creatividad con técnica para transmitir mensajes efectivos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 5 -->
+        <div class="content-section">
+            <div class="section-image-container">
+                <img src="soportee.png" alt="Soporte Técnico" class="section-image">
+            </div>
+            <div class="section-content">
+                <h3 class="section-title">Soporte Técnico Especializado</h3>
+                <div class="section-text">
+                    <p>Brindo servicios completos de soporte técnico, incluyendo mantenimiento 
+                    preventivo y correctivo de equipos, optimización de sistemas y capacitación 
+                    en el uso de tecnologías modernas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
